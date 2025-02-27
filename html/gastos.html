@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de gastos</title>
+    <link rel="shortcut icon" href="../icono/logo para una pagina de administrador de gastos con extension .png.png" type="image/png">
+    <link rel="stylesheet" href="../css/gastos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Administrador de gastos</h1>
+
+        <!-- Formulario entrada de los gastos -->
+        <form id="formulario">
+            <input type="text" id="descripcion" placeholder="Descripción" required>
+            <input type="number" id="monto" placeholder="Monto" required>
+            <select id="categoria">
+                <option value="comida">Comida</option>
+                <option value="ropa">Ropa</option>
+                <option value="arriendo">Arriendo</option>
+                <option value="transporte">Transporte</option>
+                <option value="ocio">Ocio</option>
+                <option value="otros">Otros</option>
+            </select>
+            <button type="submit" > Agregar gasto </button>
+        </form>
+
+        <!-- Lista de los gastos guardados -->
+        <h2>Lista de gastos</h2>
+        <ul id="listaGastos" ></ul>
+        
+        <!-- Es la sumatoria de todos los gastos -->
+        <h2>Resumen</h2>
+        <p>Total gastado: <span id="totalGastado" >0</span></p>
+
+        <!-- Filtro por categoria -->
+        <label for="filtroCategoria"> Filtrar por categoria: </label>
+        <select id="filtroCategoria">
+                <option value="todas">Todas</option>
+                <option value="comida">Comida</option>
+                <option value="ropa">Ropa</option>
+                <option value="arriendo">Arriendo</option>
+                <option value="transporte">Transporte</option>
+                <option value="ocio">Ocio</option>
+                <option value="otros">Otros</option>
+        </select>
+    </div>
+
+    <script src="../js/gastos.js" ></script>
+</body>
+</html>
